@@ -1,0 +1,47 @@
+<h2>Good Rating (3 or more)</h2>
+<table class="table table-striped">
+	<tr>
+        <th>Name</th>
+        <th>email</th>
+        <th>Design</th>
+        <th>Content</th>
+        <th>Speed</th>
+        <th>Overall</th>			
+    </tr>
+<% @ratings.each do |rating| %>
+	<% if rating.overall >= 3 %>
+		<tr>
+			<td><%= rating.name %></td>
+			<td><%= rating.email %></td>
+			<td><%= rating.design %></td>
+			<td><%= rating.content %></td>
+			<td><%= rating.speed %></td>
+			<td><%= rating.overall %></td>
+		</tr>
+	<% end %>
+<% end %>
+</table>
+
+<h2>Bad Rating (less than 3)</h2>
+<table class="table table-striped">
+	<tr>
+        <th>Name</th>
+        <th>email</th>
+        <th>Design</th>
+        <th>Content</th>
+        <th>Speed</th>
+        <th>Overall</th>			
+    </tr>
+<% @ratings.each do |rating| %>
+	<% if rating.overall < 3 %>
+		<tr>
+			<td><%= rating.name %></td>
+			<td><%= rating.email %></td>
+			<td><%= rating.design %></td>
+			<td><%= rating.content %></td>
+			<td><%= rating.speed %></td>
+			<td><%= rating.overall %></td>
+		</tr>
+	<% end %>
+<% end %>
+</table>

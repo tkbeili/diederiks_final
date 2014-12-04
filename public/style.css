@@ -1,0 +1,20 @@
+.profile_pic {
+	width: 100px;
+	border-radius: 20px;
+	display: inline-block;
+}
+
+.rating_list {
+	display: inline-block;
+	float: right;
+}
+
+.page_header {
+	border-top: 1px solid black;
+}
+
+label {
+	padding-top: 7px;
+	/*display: inline-block;
+	width:100px;*/
+}
